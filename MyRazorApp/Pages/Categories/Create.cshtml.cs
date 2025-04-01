@@ -20,7 +20,8 @@ namespace MyRazorApp.Pages.Categories{
         }
         public IActionResult OnPost (){
 _db.Categories.Add(Category);
-_db.SaveChanges();
+  TempData["Success"] = "Category Created successfully!";
+  _db.SaveChanges();
 return RedirectToPage("Index");
         }
     }

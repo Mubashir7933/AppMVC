@@ -27,7 +27,7 @@ Category = _db.Categories.Find(CategoryId);
 
             _db.Categories.Update(Category);
             _db.SaveChanges();
-            //TempData["Success"] = "Category Updated Successfully";
+            TempData["Success"] = "Category Updated Successfully";
             return RedirectToPage("Index");
             }
             return Page();
